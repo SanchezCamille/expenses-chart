@@ -1,0 +1,13 @@
+
+@import './variables.scss';
+
+:root {
+    background-color: $cream;
+}
+
+body {
+    font-family: $body-copy-font-family;
+    font-weight: $body-copy-font-weights;
+    font-size: $body-copy-font-size;
+
+}

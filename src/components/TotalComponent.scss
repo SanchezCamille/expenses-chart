@@ -1,0 +1,45 @@
+@import '../variables.scss';
+
+.total-component {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    background-color: $soft-red;
+    border-radius: 0.8rem;
+    color: $very-pale-orange;
+    margin: 5rem 1rem 0 1rem ;
+
+    &__balance {
+        margin: 1rem;
+        font-family: sans-serif;
+        h2 {
+            margin-top: 0.2rem;
+            font-size: 1rem;
+            font-weight: 400;
+        }
+        p {
+            font-size: 1.8rem;
+            font-weight: 600;
+        }
+    }
+
+    &__logo-elements {
+        margin: 2rem;
+        position: relative;
+        .empty-circle {
+            position: absolute;
+            border: 2px solid $very-pale-orange;
+            width: 2.6rem;
+            height: 2.6rem;
+            border-radius: 2rem;
+            right: 1.3rem;
+        }
+        .plain-circle {
+            background-color: $dark-brown;
+            width: 2.6rem;
+            height: 2.6rem;
+            border-radius: 2rem;
+        }
+    }
+}
+
