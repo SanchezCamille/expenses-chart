@@ -1,7 +1,8 @@
 /* eslint-disable react/prop-types */
 
-import { BarChart, Bar, Cell } from 'recharts';
+import { BarChart, Bar, Cell, Tooltip, XAxis, ResponsiveContainer } from 'recharts';
 import Data from '../../data.json';
+import './ChartBar.scss';
 
 function RoundedBar(props) {
   const { x, y, width, height, fill } = props;
@@ -20,19 +21,26 @@ function ChartBar() {
   }, Number.MIN_SAFE_INTEGER);
 
   return (
-    
-    <BarChart width={400} height={300} data={Data} >
+    <>
+    <ResponsiveContainer width="100%" height="100%">
+    <BarChart width="100%" height="100%" data={Data} >
+        <XAxis dataKey="day" hide={true}/>
+        <Tooltip />
         <Bar dataKey="amount" shape={RoundedBar}>
           {Data.map((entry, index) => (
             <Cell
               key={`cell-${index}`}
-              cursor="pointer"
               fill={entry.amount === maxValue ? 'hsl(186, 34%, 60%)' : 'hsl(10, 79%, 65%)'}
             />
           ))}
         </Bar>
     </BarChart>
+    </ResponsiveContainer>
+    {Data.map((item, i) => (
+        <span key={i} className='days'>{item.day}</span>
+      ))}
     
+    </>
   );
 }
 

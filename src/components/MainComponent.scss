@@ -1,0 +1,13 @@
+@import '../variables.scss';
+
+.main-component {
+    background-color: $very-pale-orange;
+    margin: 1rem 1rem;
+    border-radius: 2rem;
+    padding: 2rem;
+    height: 100vh;
+
+    &__graph {
+        height: 30%;
+    }
+}
