@@ -1,9 +1,11 @@
+import ChartBar from "./ChartBar";
+
 function MainComponent(){
     return(
         <>
         <h1>Spending - Last 7 days</h1>
         <div>
-            
+            <ChartBar />
         </div>
         <div>
             <span>Total this month</span>
