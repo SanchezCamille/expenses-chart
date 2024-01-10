@@ -36,10 +36,11 @@ function ChartBar() {
         </Bar>
     </BarChart>
     </ResponsiveContainer>
-    {Data.map((item, i) => (
+    <div className='days-container'>
+      {Data.map((item, i) => (
         <span key={i} className='days'>{item.day}</span>
       ))}
-    
+    </div>
     </>
   );
 }
