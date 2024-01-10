@@ -7,9 +7,11 @@
     padding: 2rem;
     height: 100%;
     font-family: $body-font;
+    display: flex;
+    flex-direction: column;
 
     &__graph {
-        height: 30%;
+        height: 30vh;
     }
 
     &__title {
@@ -17,31 +19,48 @@
         color: $dark-brown;
         font-weight: 900;
     }
+
+    &__sub-container {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-end;
+        margin-top: 6rem; 
+        width: 100%;
+    }
+
+    &__total-amount,
+    &__percentage {
+        width: 50%; // Répartit l'espace disponible entre les deux éléments avec un petit espace entre eux
+        box-sizing: border-box;
+        padding: 0 1rem; // Ajoutez un padding si nécessaire
+    }
+
     &__total-amount {
         &__this-month {
             font-size: 1.1rem;
             color: $medium-brown;
-            margin: 2rem 0 0.5rem 0;
+            margin-bottom: 0.5rem;
         }
+
         &__price {
             font-size: 2rem;
             color: $dark-brown;
             font-weight: 900;
         }
     }
+
     &__percentage {
         text-align: right;
-        position: absolute;
-        right: 2rem;
-        bottom: 6rem;
+        margin: 2rem;
+
         &__rate {
             color: $dark-brown;
             font-weight: 900;
         }
+
         &__last-month {
             font-size: 1.1rem;
             color: $medium-brown;
         }
     }
-    
 }
